@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: validate-app
-        image: manoj3003/validate:2
+        image: manoj3003/validate:8
         imagePullPolicy: "Always"
         ports:
         - containerPort: 80
