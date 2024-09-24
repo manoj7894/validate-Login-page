@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: validate-app
+  labels:
+    app: validate-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: validate-app
+  template:
+    metadata:
+      labels:
+        app: validate-app
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: validate-app
+        image: manoj3003/validate:2
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 80
