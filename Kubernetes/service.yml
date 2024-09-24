@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: swiggy-app
+  name: validate-app
   labels:
-    app: swiggy-app
+    app: validate-app
 spec:
   type: LoadBalancer
   ports:
   - port: 80
-    targetPort: 3000
+    targetPort: 8090
   selector:
-    app: swiggy-app
+    app: validate-app
